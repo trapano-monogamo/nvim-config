@@ -1,6 +1,8 @@
-vim.opt.termguicolors = false
+vim.opt.termguicolors = true
 
-local colorscheme = "onenord"
+-- local colorscheme = "onenord"
+local colorscheme = "gruvbox"
+-- local colorscheme = "default"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then

@@ -2,6 +2,10 @@ local keymap = vim.api.nvim_set_keymap
 local opts = { noremap = true }
 
 
+-- INSERT MODE --
+
+-- esc --
+keymap("i", ",.", "<ESC>", opts)
 
 -- NORMAL MODE --
 
@@ -22,8 +26,14 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<leader>e", ":Lex 14<CR>", opts)
 
 -- open terminal in split
---keymap("n", "<leader>t", ":belowright split | resize 15 | term<CR>a", opts)
 keymap("n", "<leader>t", ":split | resize 15 | term<CR>a", opts)
+
+-- system clipboard
+keymap("n", "<leader>y", "\"+y", opts)
+keymap("n", "<leader>p", "\"+p", opts)
+
+-- clear highlight searc
+keymap("n", "<leader>h", ":noh<CR>", opts)
 
 
 

@@ -49,6 +49,7 @@ return packer.startup(function(use)
 	use { "wbthomason/packer.nvim" --[[ have packer manage itself --]] }
 	use "lunarvim/colorschemes"
 	use "nvim-lua/popup.nvim"
+	use { "ellisonleao/gruvbox.nvim" }
 
 	-- cmp plugins
 	use "hrsh7th/nvim-cmp" -- completion plugin (LSP also works alongside this)

@@ -11,14 +11,15 @@ local options = {
 	splitbelow = true,
 	showtabline = 1,
 	number = true,
+	relativenumber = true,
 	numberwidth = 2,
-	signcolumn = "yes", -- signs will occupy an already present column
+	signcolumn = "yes",
 	smartcase = true,
 	smartindent = true,
 	shiftwidth = 4,
 	tabstop = 4,
 	expandtab = false,
-	cursorline = true,
+	cursorline = false,
 	wrap = false,
 	wildmenu = true,
 	pumheight = 10,
@@ -48,6 +49,21 @@ vim.opt.tags:append { "./vim/tags" }
 -- misc
 
 vim.cmd([[
+set guicursor=i:block
+
+autocmd FileType haskell setlocal shiftwidth=1 softtabstop=1 expandtab
+autocmd TermOpen * setlocal nonumber norelativenumber signcolumn=no
+
+set colorcolumn=80
+highlight ColorColumn guibg=#43454a
+highlight Pmenu guibg=gray
+highlight Normal guibg=none
+highlight NonText guibg=none
+
+set formatoptions-=c
+set formatoptions-=r
+set formatoptions-=o
+
 command! MakeTags !ctags -R .
 
 syntax enable

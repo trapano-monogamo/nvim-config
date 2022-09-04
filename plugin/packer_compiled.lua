@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/home/noemi/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["gruvbox.nvim"] = {
+    loaded = true,
+    path = "/home/noemi/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
+    url = "https://github.com/ellisonleao/gruvbox.nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/noemi/.local/share/nvim/site/pack/packer/start/nvim-cmp",

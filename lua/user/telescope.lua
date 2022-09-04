@@ -15,7 +15,8 @@ telescope.setup {
     prompt_prefix = "> ",
     -- selection_caret = " ",
     selection_caret = "* ",
-    path_display = { "smart" },
+    path_display = { "absolute" },
+	layout = { "flex" },
 
     mappings = {
       i = {
