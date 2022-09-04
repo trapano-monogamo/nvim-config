@@ -1,4 +1,4 @@
-lua require('tools') " idk
+lua require('tools')
 
 " enter current millenium
 set nocompatible
