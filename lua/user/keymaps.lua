@@ -2,12 +2,24 @@ local keymap = vim.api.nvim_set_keymap
 local opts = { noremap = true }
 
 
+-- not working ffs
+vim.cmd([[
+au FileType rust nnoremap <leader>b :Cargo build<CR>
+au FileType rust nnoremap <leader>r :Cargo run<CR>
+au FileType c nnoremap <leader>b :make<CR>
+au FileType c nnoremap <leader>r :make run<CR>
+]])
+
+
 -- INSERT MODE --
 
 -- esc --
 keymap("i", ",.", "<ESC>", opts)
+keymap("i", "<C-e>", "<ESC>", opts)
 
 -- NORMAL MODE --
+
+keymap("n", "<leader>b", "", opts)
 
 -- my snippets
 keymap("n", "<leader>rustmain", ":-1read $HOME/.config/nvim/snippets/.rustmain<CR>o", opts)

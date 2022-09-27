@@ -53,12 +53,7 @@ set guicursor=i:block
 
 autocmd FileType haskell setlocal shiftwidth=1 softtabstop=1 expandtab
 autocmd TermOpen * setlocal nonumber norelativenumber signcolumn=no
-
-set colorcolumn=80
-highlight ColorColumn guibg=#43454a
-highlight Pmenu guibg=gray
-highlight Normal guibg=none
-highlight NonText guibg=none
+autocmd FileType markdown setlocal wrap linebreak
 
 set formatoptions-=c
 set formatoptions-=r
