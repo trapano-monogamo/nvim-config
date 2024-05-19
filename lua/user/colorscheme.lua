@@ -1,6 +1,6 @@
 -- gruvbox, farout, onenord, jellybeans-nvim, default
-local colorscheme = "gruvbox"
-local transparent = true
+local colorscheme = "default"
+local transparent = false
 vim.opt.termguicolors = true
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
@@ -12,15 +12,19 @@ end
 vim.cmd([[
 set colorcolumn=
 highlight ColorColumn guibg=#43454a
-
-highlight! link SignColumn LineNr
-
-highlight Pmenu guibg=gray
 ]])
 
 if transparent then
 	vim.cmd([[
 		highlight Normal guibg=none
 		highlight NonText guibg=none
+	]])
+end
+
+if colorscheme == "default" then
+	vim.cmd([[
+		highlight LineNr guibg=#000000 guifg=#DDDC00
+		highlight SignColumn guibg=#000000
+		highlight Pmenu guibg=#000000
 	]])
 end

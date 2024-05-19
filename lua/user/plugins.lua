@@ -51,6 +51,18 @@ return packer.startup(function(use)
 	use "nvim-lua/popup.nvim"
 	use { "ellisonleao/gruvbox.nvim" }
 
+	-- colorschemes
+	use "folke/tokyonight.nvim"
+	use "fcpg/vim-farout"
+	use "rktjmp/lush.nvim"
+	use "metalelf0/jellybeans-nvim"
+
+	-- quality of life
+	use { "nvim-tree/nvim-tree.lua", requires = {{ "nvim-tree/nvim-web-devicons" }} }
+	use "nvim-treesitter/nvim-treesitter"
+	use { "junegunn/fzf", run = "fzf#install()" }
+	use "junegunn/fzf.vim"
+
 	-- cmp plugins
 	use "hrsh7th/nvim-cmp" -- completion plugin (LSP also works alongside this)
 	use "hrsh7th/cmp-buffer"
@@ -74,11 +86,6 @@ return packer.startup(function(use)
 		requires = {{ "nvim-lua/plenary.nvim" }}
 	}
 	use "nvim-telescope/telescope-media-files.nvim"
-
-	use "fcpg/vim-farout"
-
-	use "rktjmp/lush.nvim"
-	use "metalelf0/jellybeans-nvim"
 
 	use "ThePrimeagen/vim-be-good"
 
